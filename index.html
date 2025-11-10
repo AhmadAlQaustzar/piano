@@ -45,13 +45,14 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/web_build.loader.js";
+      // 🔧 Path diperbaiki agar cocok dengan struktur folder GitHub kamu
+      var buildUrl = "web build/Build";
+      var loaderUrl = buildUrl + "/web build.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/web_build.data.br",
-        frameworkUrl: buildUrl + "/web_build.framework.js.br",
-        codeUrl: buildUrl + "/web_build.wasm.br",
+        dataUrl: buildUrl + "/web build.data.br",
+        frameworkUrl: buildUrl + "/web build.framework.js.br",
+        codeUrl: buildUrl + "/web build.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "piano",
@@ -66,7 +67,6 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
         document.querySelector("#unity-container").className = "unity-mobile";
         canvas.className = "unity-mobile";
-        // config.devicePixelRatio = 1;
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
